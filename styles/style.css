@@ -186,10 +186,29 @@ main {
         height: auto;
         margin-bottom: 24px;
     }
+
+    .mensaje__anuncio img{
+        display: none;
+    } 
 }
 
-@media (width <=715px) {
-    main {
-        padding: 0 24px;
+@media (width <=714px) {
+
+    .entrada-encriptador {
+       width: 90%;
+    }
+
+    .texto__encriptador {
+        height: 220px;
+        margin-top: 0;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mensaje {
+        width: 90%;
     }
 }
