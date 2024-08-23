@@ -10,16 +10,20 @@ Las "llaves" de encriptación que utilizaremos son las siguientes:
 - La letra "u" es convertida para "ufat"
 */ 
 
+const mensajeAnuncio = document.querySelector(".mensaje__anuncio");
+const mensajeEncriptado = document.querySelector(".mensaje__de-encriptado");
+
 function botonEncriptar() {
     const textoEncriptado = encriptar(textoEncriptador.value);
     mensajeEncriptador.value = textoEncriptado;
     textoEncriptador.value = "";
-    mensajeEncriptador.style.backgroundImage = "none";
+    mensajeAnuncio.style.display= "none";
+    mensajeEncriptado.style.display= "flex";
 }
 
 function encriptar(stringEncriptacion) {
     let vocalesEncriptacion = [["e", "enter"], ["i", "imes"],["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringEncriptacion = stringEncriptacion.toLowerCase(); // Corregido
+    stringEncriptacion = stringEncriptacion.toLowerCase();
 
     for(let a = 0; a < vocalesEncriptacion.length; a++) {
         if (stringEncriptacion.includes(vocalesEncriptacion[a][0])) {
@@ -33,6 +37,8 @@ function botonDesencriptar() {
     const textoEncriptado = desencriptar(textoEncriptador.value);
     mensajeEncriptador.value = textoEncriptado;
     textoEncriptador.value = "";
+    mensajeAnuncio.style.display= "none";
+    mensajeEncriptado.style.display= "flex";
 }
 
 function desencriptar(stringDesencriptacion) {
@@ -45,4 +51,16 @@ function desencriptar(stringDesencriptacion) {
         }
     }
     return stringDesencriptacion;
+}
+
+function copiarMensaje() {
+    const mensajeCopiado = mensajeEncriptador.value;
+    navigator.clipboard.writeText(mensajeCopiado)
+        .then(()=>{
+            document.querySelector(".boton__copiar-mensaje").innerHTML="Copiado"
+            setTimeout(()=>{
+                document.querySelector(".boton__copiar-mensaje").innerHTML="Copiar"  
+            },2000)
+        })
+
 }

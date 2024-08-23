@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-mx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,39 @@
 </head>
 
 <body>
-    <header>
-        <img src="assets/vector-alura.png" class="logo__alura" alt="logo de Alura Latam">
-    </header>
     <main>
-        <section>
-                <textarea name="texto__encriptador" class="texto__encriptador" cols="30" rows="10" placeholder="Ingresa el texto aquí.">
-                </textarea>
+        <section class="header">
+            <img src="assets/vector-alura.svg" class="logo__alura" alt="logo de Alura Latam">
+        </section>
+
+        <section class="entrada-encriptador">
+            <textarea name="texto__encriptador" class="texto__encriptador"
+                placeholder="Ingresa el texto aquí."></textarea>
             <div class="reglas">
-                 <img src="assets/vector-exclamacion.png" alt="signo de exclamacion">
+                <img src="assets/vector-exclamacion.png" alt="signo de exclamacion">
                 <p>OJO: Solo puedes utilizar letras minúsculas y sin acentos.</p>
             </div>
             <div class="botones">
                 <button class="boton__encriptar" type="button" onclick="botonEncriptar()">
-                     Encriptar
-                 </button>
-                <button class="boton__desencriptar" type="button" onclick="botonDesencriptar()">
-                     Desencriptar
+                    Encriptar
                 </button>
-             </div>
+                <button class="boton__desencriptar" type="button" onclick="botonDesencriptar()">
+                    Desencriptar
+                </button>
+            </div>
         </section>
         <section class="mensaje">
-            <textarea name="mensaje__encriptador" class="mensaje__encriptador" cols="30" rows="10"></textarea>
-            <button class="boton__copiar-mensaje" type="button" onclick="copiarMensaje()"> 
-                     Copiar 
-            </button>
+            <div class="mensaje__anuncio">
+                <img src="/assets/muñeco.svg" alt="muñeco con lupa">
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="mensaje__de-encriptado">
+                <textarea name="mensaje__encriptador" class="mensaje__encriptador"></textarea>
+                <button class="boton__copiar-mensaje" type="button" onclick="copiarMensaje()">
+                    Copiar
+                </button>
+            </div>
         </section>
     </main>
 
@@ -42,7 +51,7 @@
     </footer>
 </body>
 
-<script src="app.js"> 
+<script src="app.js">
 </script>
 
 </html>
