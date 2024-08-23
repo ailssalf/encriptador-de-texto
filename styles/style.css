@@ -47,7 +47,7 @@ main {
         outline: none;
 }
 
-.mensaje__encriptado {
+.mensaje__encriptador {
     background-color: var(--color-cuaternario);
     background-image: url(/assets/muñeco.png);
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@ main {
     position: fixed;
 }
 
-.mensaje__encriptado:focus {
+.mensaje__encriptador:focus {
     outline: none;
 }
 
@@ -119,6 +119,6 @@ main {
     top: 96%;
     display: flex;
     justify-content: center;
-    background-color: #0A3871;
+    background-color: var(--color-primario);
     font-size: 14px;
 }
