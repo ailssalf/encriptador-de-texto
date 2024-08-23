@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto by Ailssa LF</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/vector-alura.png" alt="logo 'a' de Alura">
+    </header>
+
+    <div class="contenedor">
+        <div class="contenedor__encriptador"> 
+            <textarea 
+                name="texto" 
+                class="texto" 
+                id="texto"
+                placeholder="Ingresa el texto aquí">
+            </textarea>
+        </div>
+        <div class="contenedor__reglas">
+            <img src="assets/vector-exclamacion.png" alt="signo de exclamacion">
+            <p>Utiliza solo letras minúsculas y sin acentos.</p>
+        </div>
+        <div class="contenedor__botones">
+            <button class="boton__encriptar" type="button" onclick="encriptar()">
+                Encriptar
+            </button>
+            <button class="boton__desencriptar" type="button" onclick="desencriptar()">
+                Desencriptar
+            </button>
+        </div>
+        <div class="contenedor__texto-encriptado"></div>
+        <img src="assets/muñeco.png" alt="Muñeco con lupa">
+        <div class="contenedor__texto-encriptado__mensaje">
+        <h2 id="titulo-mensaje"> Mensaje no encontrado </h2>
+        <p id="parrafo-mensaje">Escribe el texto que deseas encriptar o desencriptar</p>
+        <textarea name="mensaje" id="mensaje" class="mensaje"></textarea>
+        <button class="boton__copiar-mensaje-encripado" type="button" onclick="copiarMensaje()"> 
+            Copiar 
+        </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p> Desarrollado por Ailssa Leyzaola, con Alura Latam
+        </p>
+    </footer>
+
+</body>
+
+<script src="app.js"> 
+</script>
+
+</html>
