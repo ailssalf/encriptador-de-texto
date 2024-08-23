@@ -51,13 +51,13 @@ main {
     background-color: var(--color-cuaternario);
     background-image: url(/assets/muñeco.png);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     border: none;
     border-radius: 24px;
     font-size: 32px;
     color: var(--color-primario);
-    margin-left: 100px;
-    margin-top: 20px;
-    position: fixed;
+    padding-left: 20px;
 }
 
 .mensaje__encriptador:focus {
@@ -92,6 +92,15 @@ main {
     width: 326px;
 }
 
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    background-color: var(--color-cuaternario);
+    border-radius: 24px;
+}
+
 .boton__copiar-mensaje {
     border: 1px solid var(--color-primario);
     border-radius: 24px;
@@ -100,9 +109,7 @@ main {
     cursor: pointer;
     height: 67px;
     margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
-    width: 336px;
+    width: 200px;
 }
 
 .reglas {
@@ -113,7 +120,7 @@ main {
     font-size: 12px;
     color: var(--color-secundario);
 }
-
+/*
 .footer {
     padding: 1% 0% 1% 8%;
     top: 96%;
@@ -122,3 +129,4 @@ main {
     background-color: var(--color-primario);
     font-size: 14px;
 }
+*/

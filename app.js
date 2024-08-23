@@ -18,7 +18,7 @@ function botonEncriptar() {
 }
 
 function encriptar(stringEncriptacion) {
-    let vocalesEncriptacion = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    let vocalesEncriptacion = [["e", "enter"], ["i", "imes"],["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringEncriptacion = stringEncriptacion.toLowerCase(); // Corregido
 
     for(let a = 0; a < vocalesEncriptacion.length; a++) {
